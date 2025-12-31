@@ -1,168 +1,192 @@
-.bagian-2{
+.bagian-2 {
     background-color: black;
-
-    min-height: 2000px;   
+    min-height: auto;
+    padding: 30px 0; 
+    overflow-x: hidden;
 }
 
-h2{
-    position: relative;
+h2 {
     color: white;
     text-align: center;
-    font-size: 45px;
-    margin-top:200px ;
-}
-
-
-/* bagian element about */
-
-.about-1{
-    display :flex ;
-    padding: 100px ;
-    margin-top: 300px;
-}
-
-.about-1 img{
-    max-width: 30%;
-    border-radius: 50%;
-}
-
-.about-1-text{
-    text-wrap: balance;
-    transform:translateX(-500px) ;
-    max-width: 1000px;
-
-}
-
-.about-1-text h3{
-    font-size: 35px;
-    color: antiquewhite;
-}
-
-.about-1-text p{
-    font-size:20px ;
-    color: white;
-}
-
-.about-1-text button{
-    width: 120px;
-    height: 50px;
-    background-color: rgb(109, 23, 23);
-    color: white;
-    font-size: 20px;
-    border-radius: 5px;
-    transition: transform 0.5s ease, color 0.5s ease ;
-    cursor: pointer;
+    font-size: 38px;
+    margin: 60px 0 40px 0;
 }
 
 
 
-.about-2{
+
+.about-1, .about-2, .about-3 {
     display: flex;
-    justify-content: space-between;
-    margin-top: 200px;
+    align-items: center;
+    margin: 80px 0; 
+    width: 100%; 
 }
 
 
-.about-2-text{
-    text-wrap: balance;
-    padding-left: 1000px;
-    max-width: 800px;
-    transform: translateX(150px);
+.about-1, .about-3 {
+    justify-content: flex-start;
 }
 
-.bagian-2-image{
-    margin-right: 80px; 
+
+.about-2 {
+    justify-content: flex-end; 
 }
 
-.bagian-2-image img{
-    width: 300px;
-    height: 300px;
+
+.about-1 img, .about-3 img {
+    width: 260px;  
+    height: 260px;
     border-radius: 50%;
     object-fit: cover;
+    margin-left: 50px; 
 }
 
-.about-2-text h3{
-    font-size: 35px;
-    color: antiquewhite;
-}
-
-.about-2-text p{
-    font-size:20px ;
-    color: white;
-}
-
-.about-2-text button{
-    width: 129px;
-    height: 50px;
-    background-color: rgb(109, 23, 23);
-    color: white;
-    font-size: 20px;
-    border-radius: 5px;
-    transition: transform 0.5s ease, color 0.5s ease ;
-    cursor: pointer;
-}
-
-
-.about-3{
-    display :flex ;
-    padding: 100px ;
-    margin-top: 200px;
-}
-
-.about-3 img{
-    max-width: 30%;
+.bagian-2-image img {
+    width: 260px;
+    height: 260px;
     border-radius: 50%;
+    object-fit: cover;
+    margin-right: 50px; 
 }
 
-.about-3-text{
-    text-wrap: balance;
-    transform:translateX(-600px) ;
-    max-width: 1000px;
 
-}
-
-.about-3-text h3{
-    font-size: 35px;
-    color: antiquewhite;
-}
-
-.about-3-text p{
-    font-size:20px ;
+.about-1-text, .about-2-text, .about-3-text {
+    width: 550px; 
+    margin: 0 50px; 
     color: white;
 }
 
-.about-3-text button{
+
+.about-1-text h3, .about-2-text h3, .about-3-text h3 {
+    font-size: 26px;
+    color: antiquewhite;
+    margin-bottom: 12px;
+}
+
+.about-1-text p, .about-2-text p, .about-3-text p {
+    font-size: 17px;
+    line-height: 1.5;
+    color: white;
+    margin-bottom: 20px;
+    text-wrap: pretty;
+    word-wrap: break-word;
+}
+
+
+.about-1-text button, 
+.about-2-text button, 
+.about-3-text button {
     width: 120px;
-    height: 50px;
-    background-color: rgb(109, 23, 23);
+    height: 40px;
+    background-color: #4B0000;
     color: white;
-    font-size: 20px;
+    font-size: 15px;
     border-radius: 5px;
-    transition: transform 0.5s ease, color 0.5s ease ;
+    border: none;
     cursor: pointer;
+    transition: all 0.3s ease;
 }
 
-.about-1-text button:hover{
-    color: antiquewhite;
-    transform: scale(1.1);
+.about-1-text button:hover, 
+.about-2-text button:hover, 
+.about-3-text button:hover {
+    transform: scale(1.05);
+    background-color: #5a0000;
 }
 
-.about-2-text button:hover{
-    color: antiquewhite;
-    transform: scale(1.1);
+
+.about-1-text, .about-3-text {
+    text-align: left;
+}
+
+.about-2-text {
+    text-align: right;
+}
+
+
+.about-2 .about-2-text {
+    order: 1; 
+}
+
+.about-2 .bagian-2-image {
+    order: 2; 
+}
+
+
+@media (max-width: 1100px) {
+    .about-1 img, .about-3 img {
+        margin-left: 30px;
+        width: 230px;
+        height: 230px;
+    }
     
+    .bagian-2-image img {
+        margin-right: 30px;
+        width: 230px;
+        height: 230px;
+    }
+    
+    .about-1-text, .about-2-text, .about-3-text {
+        width: 500px;
+        margin: 0 30px;
+    }
 }
 
-.about-3-text button:hover{
-    color: antiquewhite;
-    transform: scale(1.1);
-
+@media (max-width: 900px) {
+    .about-1, .about-2, .about-3 {
+        flex-direction: column;
+        text-align: center;
+        margin: 60px 0;
+    }
+    
+    .about-1 img, .about-3 img {
+        margin: 0 0 30px 0;
+        width: 200px;
+        height: 200px;
+    }
+    
+    .bagian-2-image img {
+        margin: 0 0 30px 0;
+        width: 200px;
+        height: 200px;
+    }
+    
+    .about-1-text, .about-2-text, .about-3-text {
+        width: 90%;
+        margin: 0 auto;
+        text-align: center !important;
+    }
+    
+    .about-2 .about-2-text,
+    .about-2 .bagian-2-image {
+        order: 0; 
+    }
+    
+    h2 {
+        font-size: 32px;
+        margin: 40px 0 30px 0;
+    }
 }
 
-.bagian-bawah{
+@media (max-width: 480px) {
+    .about-1-text h3, .about-2-text h3, .about-3-text h3 {
+        font-size: 22px;
+    }
+    
+    .about-1-text p, .about-2-text p, .about-3-text p {
+        font-size: 15px;
+    }
+    
+    .about-1 img, .about-3 img,
+    .bagian-2-image img {
+        width: 180px;
+        height: 180px;
+    }
+}
+
+.bagian-bawah {
     text-align: center;
+    margin-top: 50px;
+    color: white;
+    padding: 20px 0;
 }
-
- 
-
-
