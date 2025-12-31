@@ -1,0 +1,102 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    background-color:#4B0000
+;
+}
+
+header nav{
+    display: inline-block;
+    padding-right: 300px;
+    padding-top: 20px;
+}
+
+header div{
+    display: inline-block;
+    padding-left: 200px;
+}
+
+header p{
+    font-size: 25px;
+    font-style: italic;
+    color:antiquewhite;
+}
+
+header a{
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    font-size: 35px;
+    padding: 0 20px;
+    transition: transform 0.5s ease, color 0.4s ease;;
+    cursor: pointer;
+}
+    header a:hover{
+    transform: scale(1.1);
+    color:antiquewhite;
+}
+
+body{
+    background-color: black;
+}
+
+.bagian1{
+    display: flex;
+    justify-content: center;
+}
+
+.card1{
+    border-radius: 15px;
+    margin-top: 150px;
+    height: 600px;
+    width: 1000px;
+    padding: 20px 50px;
+    background-color: #4B0000;
+}
+
+.card-atas{
+    display: flex;
+    justify-content: space-between;
+}
+
+.foto img{
+    margin-top: 20px;
+    width: 55%;
+    border-radius: 30px;
+}
+
+.biodata{
+    transform: translateX(-200px);
+}
+
+.biodata h2{
+    font-size: 35px;
+    color: antiquewhite;
+}
+
+.biodata p{
+    color: white;
+    font-size: 20px;
+}
+
+.biodata li{
+    transform: translateX(-40px);
+    margin-top: 5px;
+    color: white;
+    list-style: none;
+    font-size: 15px;
+}
+
+.card-bawah h3{
+    margin-top: 50px;
+    text-wrap: balance;
+    color: white;
+    font-size: x-large;
+}
+
+.card-bawah p{
+    max-width: 800px;
+    color: white;
+    font-size: larger;
+}
