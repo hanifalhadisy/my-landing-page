@@ -2,6 +2,7 @@ body {
     overflow-x: hidden;
     margin: 0;
     background-color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .section-1 {
@@ -9,15 +10,16 @@ body {
     min-height: 100vh;
 }
 
-
+/* HEADER YANG LEBIH PROPOSIONAL */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #4B0000;
-    padding: 12px 50px;
+    padding: 10px 40px;
     position: relative;
     z-index: 100;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
 header div {
@@ -25,10 +27,12 @@ header div {
 }
 
 header p {
-    font-size: 20px;
+    font-size: 16px;
     font-style: italic;
     color: antiquewhite;
     margin: 0;
+    font-weight: 300;
+    letter-spacing: 0.5px;
 }
 
 header nav {
@@ -40,66 +44,73 @@ header a {
     display: inline-block;
     color: white;
     text-decoration: none;
-    font-size: 24px;
-    padding: 0 15px;
-    transition: transform 0.3s ease, color 0.3s ease;
+    font-size: 18px;
+    padding: 0 12px;
+    transition: all 0.3s ease;
+    font-weight: 400;
 }
 
 header a:hover {
-    transform: scale(1.05);
-    color: antiquewhite;
+    transform: translateY(-2px);
+    color: #FFD8B1;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-
+/* BAGIAN UTAMA */
 .bagian-1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 80px 50px;
+    padding: 0 60px 40px;
     max-width: 1400px;
     margin: 0 auto;
-    min-height: calc(100vh - 80px);
+    min-height: calc(100vh - 70px);
 }
-
 
 .bagian-text {
     color: aliceblue;
     max-width: 600px;
     flex: 1;
-    margin-right: 150px; 
-    margin-top: 10px;
-}
-
-.text-h1 {
-    font-size: 40px;
-    margin-bottom: 8px;
-    line-height: 1.2;
+    margin-right: 120px; 
     margin-top: 0;
 }
 
+.text-h1 {
+    font-size: 36px;
+    margin-bottom: 8px;
+    line-height: 1.2;
+    margin-top: 0;
+    font-weight: 600;
+    color: #ffffff;
+    letter-spacing: -0.5px;
+}
+
 .p1 {
-    font-size: 26px;
-    color: antiquewhite;
+    font-size: 22px;
+    color: #FFD8B1;
     margin-bottom: 15px;
+    font-weight: 400;
+    letter-spacing: 0.3px;
 }
 
 .p2 {
-    font-size: 17px;
-    line-height: 1.5;
+    font-size: 16px;
+    line-height: 1.6;
     margin-bottom: 25px;
-    color: #ccc;
-    font-style: italic;
+    color: #d1d1d1;
+    font-weight: 300;
+    max-width: 90%;
 }
 
-
 .img-gua {
-    width: 300px;  
-    height: 300px;
+    width: 280px;  
+    height: 280px;
     border-radius: 50%;
     object-fit: cover;
     border: 3px solid #4B0000;
     flex-shrink: 0;
     margin-top: 10px;
+    box-shadow: 0 5px 20px rgba(75, 0, 0, 0.4);
 }
 
 /* ACTION AREA */
@@ -107,42 +118,45 @@ header a:hover {
     display: flex;
     align-items: center;
     gap: 25px;
-    margin-top: 20px;
+    margin-top: 25px;
 }
 
 .btn-about {
-    width: 150px;
-    height: 45px;
-    font-size: 16px;
+    width: 140px;
+    height: 42px;
+    font-size: 15px;
     background-color: #4B0000;
     color: white;
     border-radius: 6px;
     border: none;
     cursor: pointer;
     transition: all 0.3s ease;
+    font-weight: 500;
+    letter-spacing: 0.5px;
 }
 
 .btn-about:hover {
-    transform: scale(1.05);
+    transform: translateY(-2px);
     background-color: #5a0000;
     color: antiquewhite;
+    box-shadow: 0 5px 15px rgba(75, 0, 0, 0.4);
 }
 
 /* SOCIAL ICONS */
 .social-icons {
     display: flex;
-    gap: 20px;
+    gap: 18px;
 }
 
 .social-icons a {
     color: white;
-    font-size: 22px;
+    font-size: 20px;
     transition: all 0.3s ease;
 }
 
 .social-icons a:hover {
-    color: rgb(172, 79, 18);
-    transform: scale(1.1);
+    color: #FFD8B1;
+    transform: scale(1.15);
 }
 
 /* ====== RESPONSIVE ====== */
@@ -152,13 +166,21 @@ header a:hover {
     }
     
     .img-gua {
-        width: 280px; 
-        height: 280px;
+        width: 260px; 
+        height: 260px;
     }
     
     .bagian-text {
         max-width: 550px;
-        margin-right: 100px;
+        margin-right: 80px;
+    }
+    
+    .text-h1 {
+        font-size: 34px;
+    }
+    
+    .p1 {
+        font-size: 20px;
     }
 }
 
@@ -167,42 +189,52 @@ header a:hover {
         flex-direction: column-reverse;
         text-align: center;
         padding: 0 30px 30px;
-        gap: 40px; 
+        gap: 35px;
     }
     
     .bagian-text {
-        max-width: 90%;
-        margin-right: 0; 
+        max-width: 85%;
+        margin-right: 0;
         order: 2;
         margin-top: 0;
     }
     
+    .p2 {
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
     .img-gua {
         order: 1;
-        width: 250px; 
-        height: 250px;
-        margin-top: 15px;
+        width: 240px;
+        height: 240px;
+        margin-top: 10px;
     }
     
     header {
-        padding: 10px 30px;
+        padding: 8px 25px;
     }
     
     header a {
-        font-size: 20px;
-        padding: 0 10px;
+        font-size: 17px;
+        padding: 0 8px;
     }
     
     header p {
-        font-size: 18px;
+        font-size: 15px;
     }
     
     .text-h1 {
-        font-size: 34px;
+        font-size: 32px;
     }
     
     .p1 {
-        font-size: 22px;
+        font-size: 19px;
+    }
+    
+    .action-area {
+        justify-content: center;
     }
 }
 
@@ -218,11 +250,11 @@ header a:hover {
     }
     
     .text-h1 {
-        font-size: 30px;
+        font-size: 28px;
     }
     
     .p1 {
-        font-size: 20px;
+        font-size: 18px;
     }
     
     .p2 {
@@ -232,7 +264,7 @@ header a:hover {
     .btn-about {
         width: 130px;
         height: 40px;
-        font-size: 15px;
+        font-size: 14px;
     }
     
     .social-icons {
@@ -240,13 +272,17 @@ header a:hover {
     }
     
     .social-icons a {
-        font-size: 20px;
+        font-size: 18px;
     }
     
     .action-area {
         flex-direction: column;
         gap: 15px;
-        margin-top: 15px;
+        margin-top: 20px;
+    }
+    
+    header {
+        padding: 8px 20px;
     }
 }
 
@@ -259,16 +295,19 @@ header a:hover {
     
     header nav {
         display: flex;
-        gap: 10px;
+        gap: 8px;
+        flex-wrap: wrap;
+        justify-content: center;
     }
     
     header a {
-        font-size: 18px;
+        font-size: 15px;
         padding: 0 6px;
     }
     
     header p {
-        font-size: 16px;
+        font-size: 14px;
+        text-align: center;
     }
     
     .bagian-1 {
@@ -279,14 +318,23 @@ header a:hover {
     .img-gua {
         width: 200px;
         height: 200px;
-        margin-top: 10px;
+        margin-top: 5px;
     }
     
     .text-h1 {
-        font-size: 28px;
+        font-size: 26px;
     }
     
     .p1 {
-        font-size: 18px;
+        font-size: 17px;
+    }
+    
+    .p2 {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+    
+    .bagian-text {
+        max-width: 95%;
     }
 }
