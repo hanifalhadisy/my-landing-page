@@ -1,102 +1,366 @@
-header{
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+
+header {
     display: flex;
     justify-content: space-between;
-    text-align: center;
-    background-color:#4B0000
-;
+    align-items: center;
+    background-color: #4B0000;
+    padding: 12px 30px;
+    position: relative;
+    z-index: 100;
 }
 
-header nav{
-    display: inline-block;
-    padding-right: 300px;
-    padding-top: 20px;
+header nav {
+    display: flex;
+    gap: 15px;
+    padding: 0;
+    margin: 0;
 }
 
-header div{
-    display: inline-block;
-    padding-left: 200px;
+header div {
+    padding: 0;
 }
 
-header p{
-    font-size: 25px;
+header p {
+    font-size: 20px;
     font-style: italic;
-    color:antiquewhite;
+    color: antiquewhite;
+    margin: 0;
 }
 
-header a{
+header a {
     display: inline-block;
     color: white;
     text-decoration: none;
-    font-size: 35px;
-    padding: 0 20px;
-    transition: transform 0.5s ease, color 0.4s ease;;
+    font-size: 24px;
+    padding: 5px 12px;
+    transition: transform 0.3s ease, color 0.3s ease;
     cursor: pointer;
 }
-    header a:hover{
-    transform: scale(1.1);
-    color:antiquewhite;
-}
 
-body{
-    background-color: black;
-}
-
-.bagian1{
-    display: flex;
-    justify-content: center;
-}
-
-.card1{
-    border-radius: 15px;
-    margin-top: 150px;
-    height: 600px;
-    width: 1000px;
-    padding: 20px 50px;
-    background-color: #4B0000;
-}
-
-.card-atas{
-    display: flex;
-    justify-content: space-between;
-}
-
-.foto img{
-    margin-top: 20px;
-    width: 55%;
-    border-radius: 30px;
-}
-
-.biodata{
-    transform: translateX(-200px);
-}
-
-.biodata h2{
-    font-size: 35px;
+header a:hover {
+    transform: scale(1.05);
     color: antiquewhite;
 }
 
-.biodata p{
-    color: white;
-    font-size: 20px;
+
+.bagian1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 20px;
+    min-height: calc(100vh - 70px);
 }
 
-.biodata li{
-    transform: translateX(-40px);
-    margin-top: 5px;
+.card1 {
+    border-radius: 15px;
+    width: 90%;
+    max-width: 1000px;
+    padding: 25px 30px;
+    background-color: #4B0000;
+    margin: 20px auto;
+}
+
+
+.card-atas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+.foto {
+    flex: 0 0 300px;
+    text-align: center;
+}
+
+.foto img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.biodata {
+    flex: 1;
+    min-width: 300px;
+    transform: none; 
+}
+
+.biodata h2 {
+    font-size: 30px;
+    color: antiquewhite;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.biodata p {
+    color: white;
+    font-size: 18px;
+    line-height: 1.5;
+    margin: 10px 0;
+}
+
+.biodata ul {
+    padding-left: 0;
+    margin: 15px 0;
+}
+
+.biodata li {
     color: white;
     list-style: none;
-    font-size: 15px;
+    font-size: 16px;
+    margin-bottom: 8px;
+    padding-left: 0;
+    transform: none; 
+    position: relative;
+    padding-left: 25px;
 }
 
-.card-bawah h3{
-    margin-top: 50px;
-    text-wrap: balance;
-    color: white;
-    font-size: x-large;
+.biodata li:before {
+    content: "•";
+    color: antiquewhite;
+    font-size: 20px;
+    position: absolute;
+    left: 0;
+    top: -2px;
 }
 
-.card-bawah p{
-    max-width: 800px;
+
+.card-bawah {
+    margin-top: 30px;
+}
+
+.card-bawah h3 {
     color: white;
-    font-size: larger;
+    font-size: 24px;
+    margin-bottom: 15px;
+    text-wrap: pretty; 
+}
+
+.card-bawah p {
+    max-width: 100%;
+    color: white;
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 0 0 15px 0;
+}
+
+/* ====== RESPONSIVE BREAKPOINTS ====== */
+
+
+@media (max-width: 1024px) {
+    .card1 {
+        width: 95%;
+        padding: 20px 25px;
+    }
+    
+    .card-atas {
+        gap: 25px;
+    }
+    
+    .foto {
+        flex: 0 0 250px;
+    }
+    
+    .foto img {
+        max-width: 250px;
+    }
+    
+    .biodata h2 {
+        font-size: 28px;
+    }
+    
+    .biodata p {
+        font-size: 17px;
+    }
+    
+    header a {
+        font-size: 22px;
+        padding: 5px 10px;
+    }
+    
+    header p {
+        font-size: 18px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .bagian1 {
+        padding: 20px 15px;
+    }
+    
+    .card1 {
+        padding: 20px;
+        margin: 10px auto;
+    }
+    
+    .card-atas {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+    }
+    
+    .foto {
+        flex: 0 0 auto;
+    }
+    
+    .foto img {
+        max-width: 220px;
+    }
+    
+    .biodata {
+        min-width: 100%;
+        text-align: center;
+    }
+    
+    .biodata li {
+        text-align: left;
+        display: inline-block;
+        width: 48%;
+        margin-right: 2%;
+        vertical-align: top;
+    }
+    
+    .biodata li:nth-child(2n) {
+        margin-right: 0;
+    }
+    
+    header {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px 20px;
+        text-align: center;
+    }
+    
+    header nav {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    
+    header a {
+        font-size: 20px;
+        padding: 4px 8px;
+    }
+}
+
+
+@media (max-width: 600px) {
+    .bagian1 {
+        padding: 15px 10px;
+    }
+    
+    .card1 {
+        padding: 15px;
+        border-radius: 10px;
+    }
+    
+    .foto img {
+        max-width: 180px;
+        border-radius: 15px;
+    }
+    
+    .biodata h2 {
+        font-size: 24px;
+    }
+    
+    .biodata p {
+        font-size: 16px;
+    }
+    
+    .biodata li {
+        width: 100%;
+        margin-right: 0;
+        font-size: 15px;
+    }
+    
+    .card-bawah h3 {
+        font-size: 20px;
+    }
+    
+    .card-bawah p {
+        font-size: 16px;
+    }
+    
+    header {
+        padding: 8px 15px;
+    }
+    
+    header a {
+        font-size: 18px;
+        padding: 3px 6px;
+    }
+    
+    header p {
+        font-size: 16px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .foto img {
+        max-width: 150px;
+    }
+    
+    .biodata h2 {
+        font-size: 22px;
+    }
+    
+    .biodata p {
+        font-size: 15px;
+    }
+    
+    .biodata li {
+        font-size: 14px;
+        padding-left: 20px;
+    }
+    
+    .card-bawah h3 {
+        font-size: 18px;
+    }
+    
+    .card-bawah p {
+        font-size: 15px;
+        line-height: 1.5;
+    }
+    
+    header nav {
+        gap: 8px;
+    }
+    
+    header a {
+        font-size: 16px;
+        padding: 2px 4px;
+    }
+    
+    header p {
+        font-size: 14px;
+    }
+}
+
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    .card-bawah h3,
+    .card-bawah p,
+    .biodata p {
+        text-wrap: pretty;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
 }
